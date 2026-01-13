@@ -8,7 +8,7 @@ import time
 load_dotenv()
 
 # OpenRouter API configuration
-API_KEY = os.getenv("GEMINI_API_KEY") or os.getenv("OPENROUTER_API_KEY") or "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"
+API_KEY = os.getenv("GEMINI_API_KEY") or os.getenv("GEMINI_API_KEY") or "GEMINI_API_KEY"
 BASE_URL = "https://openrouter.ai/api/v1/chat/completions"
 MODEL = "google/gemini-2.0-flash-exp:free"
 
