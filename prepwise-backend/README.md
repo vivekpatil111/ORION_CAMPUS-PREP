@@ -1,4 +1,4 @@
-# PrepWise Backend API
+# Campus-Prep Backend API
 
 FastAPI backend for PrepWise interview preparation platform.
 
