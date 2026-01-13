@@ -1,216 +1,181 @@
-🚀 CampusPrep — From Campus to Career
+# 🚀 CampusPrep — From Campus to Career
 
 CampusPrep is an AI-powered interview preparation platform designed to bridge the gap between academic learning and real-world industry expectations.
 
 The platform follows a structured Student → Alumni → Admin → Platform Services workflow, powered by an intelligent MCP Tool (Model Control & Processing Tool) that dynamically decides interview complexity based on student readiness.
 
-🧠 Problem Statement
+---
 
-Many students enter placements without:
+## 🧠 Problem Statement
 
-Real interview exposure
+Many students enter placements without real interview exposure, industry-relevant feedback, or structured evaluation.  
+Traditional mock interviews are limited, biased, and not scalable.
 
-Industry-relevant feedback
+---
 
-Structured evaluation
+## 🎯 Solution Overview
 
-Traditional mock interviews are limited, biased, or not scalable.
+CampusPrep provides:
+- AI-driven mock interviews  
+- Resume-based interview routing using MCP Tool  
+- Alumni involvement for real-world validation  
+- Admin-level monitoring and control  
+- Secure, immutable interview results in PDF format  
 
-🎯 Solution Overview
+---
 
-CampusPrep solves this by providing:
+## 🧩 System Roles
 
-AI-driven mock interviews
+### 🧑‍🎓 Student
+- Upload resume  
+- Request interview  
+- Attend interview rounds (voice / video / AI)  
+- View feedback and result PDF  
 
-Resume-based interview routing using MCP Tool
+### 🎓 Alumni
+- View student interview requests  
+- Accept or reject requests  
+- Validate interview flow with industry perspective  
 
-Alumni involvement for real-world validation
+### 🛡️ Admin
+- Verify alumni  
+- Monitor interview requests  
+- Oversee interview quality and fairness  
 
-Admin-level monitoring and control
+---
 
-Secure, immutable interview results in PDF format
-
-🧩 System Roles
-🧑‍🎓 Student
-
-Upload resume
-
-Request interview
-
-Attend interview rounds (voice / video / AI)
-
-View feedback and result PDF
-
-🎓 Alumni
-
-View student interview requests
-
-Accept or reject requests
-
-Validate interview flow with industry perspective
-
-🛡️ Admin
-
-Verify alumni
-
-Monitor interview requests
-
-Oversee interview quality and fairness
-
-🧠 MCP Tool (Model Control & Processing Tool)
+## 🧠 MCP Tool (Model Control & Processing Tool)
 
 The MCP Tool acts as the decision engine of CampusPrep.
 
-What it does
+### Responsibilities
+- Analyze student resumes  
+- Evaluate interview request details  
+- Decide the appropriate interview level  
 
-Analyzes the student’s resume
+### Decision Logic
+- YES (Qualified Resume) → Specific / Real Technical Interview  
+- NO (Beginner / Incomplete Resume) → Basic Interview  
 
-Evaluates interview request details
+This ensures fair, adaptive, and student-friendly interview experiences.
 
-Decides the appropriate interview level
+---
 
-Decision Logic
+## 🔄 Complete Workflow
 
-YES (Qualified Resume) → Specific / Real Technical Interview
+Student  
+→ Student Dashboard  
+→ Resume Upload  
+→ Interview Request  
+→ MCP Tool Decision  
+→ Interview Rounds  
+→ AI Evaluation  
+→ Result PDF Generated  
+→ Secure Storage  
+→ Linked to All Dashboards  
 
-NO (Beginner / Incomplete Resume) → Basic Interview
+---
 
-This ensures:
+## 📊 Dashboards
 
-Beginners are not overwhelmed
+### Student Dashboard
+- Interview request status  
+- Interview history  
+- Feedback and PDF reports  
 
-Advanced students receive industry-level challenges
+### Alumni Dashboard
+- Student interview requests  
+- Accept / Reject actions  
+- Interview records  
 
-🔄 Complete Workflow (Architecture-Based)
-Student
-→ Student Dashboard
-→ Resume Upload
-→ Interview Request
-→ MCP Tool Decision
-    ├── YES → Specific / Real Technical Interview
-    └── NO  → Basic Interview
-→ Interview Rounds
-→ AI Evaluation
-→ Result PDF Generated
-→ Secure Storage
-→ Linked to All Dashboards
+### Admin Dashboard
+- Alumni verification  
+- Request monitoring  
+- Interview oversight  
 
-📊 Dashboards
-Student Dashboard
+All dashboards are synced to a central system ensuring transparency and consistency.
 
-Request status
+---
 
-Interview history
+## ☁️ Platform Services
 
-Feedback & PDF reports
+- Secure Storage (Firebase / Cloud Storage)  
+- Immutable Storage to prevent tampering  
+- Auto-generated interview result PDFs  
+- Dashboard-linked results  
 
-Alumni Dashboard
+---
 
-Student requests
+## 🛠️ Tech Stack
 
-Accept / Reject actions
+### Frontend
+- React (Vite)  
+- Tailwind CSS  
+- Firebase Authentication  
+- Firebase Storage  
 
-Interview records
+### Backend
+- Python (FastAPI)  
+- Firebase Admin SDK  
+- Gemini API (LLM)  
+- REST APIs  
 
-Admin Dashboard
+### AI Layer
+- Resume analysis  
+- Interview question generation  
+- Answer evaluation  
+- MCP Tool decision engine  
 
-Alumni verification
+---
 
-Request monitoring
+## 🔐 Security Practices
 
-Interview oversight
+- Environment files excluded via .gitignore  
+- Firebase service account keys are never committed  
+- Backend secrets are not exposed to frontend  
+- Interview results stored immutably  
 
-Central Dashboard
+---
 
-All roles are synced to a central system ensuring transparency and consistency.
+## 🎯 Expected Outcomes
 
-☁️ Platform Services
+- Realistic interview preparation  
+- Industry-aligned evaluation  
+- Transparent and verifiable results  
+- Scalable solution for colleges and training cells  
 
-Secure Storage: Firebase / Cloud Storage
+---
 
-Immutable Storage: Prevents result tampering
+## 🧪 Use Cases
 
-PDF Generation: Auto-generated interview reports
+- College placement preparation  
+- Training & Placement cells  
+- Hackathons and tech fests  
+- Individual interview practice  
 
-Dashboard Linking: PDFs visible to Student, Alumni, and Admin
+---
 
-🛠️ Tech Stack
-Frontend
+## 👨‍💻 Team
 
-React (Vite)
+**Team Name:** BlockMinds  
 
-Tailwind CSS
+**Team Leader:**  
+Vivek N Patil  
 
-Firebase Authentication
+**Team Members:**  
+- Mansvi Patel  
+- Roshni Rajput  
+- Khushi Dhamani  
 
-Firebase Storage
+---
 
-Backend
+## 📜 License
 
-Python (FastAPI)
-
-Firebase Admin SDK
-
-Gemini API (LLM)
-
-REST APIs
-
-AI Layer
-
-Resume analysis
-
-Interview question generation
-
-Answer evaluation
-
-MCP Tool decision engine
-
-🔐 Security Practices
-
-.env files excluded via .gitignore
-
-Firebase service account keys are never committed
-
-Backend secrets are not exposed to frontend
-
-Interview results stored immutably
-
-🎯 Expected Outcomes
-
-Realistic interview preparation
-
-Industry-aligned evaluation
-
-Transparent and verifiable results
-
-Scalable solution for colleges and training cells
-
-🧪 Use Cases
-
-College placement preparation
-
-Training & Placement cells
-
-Hackathons and tech fests
-
-Individual interview practice
-
-👨‍💻 Team
-
-Team Name: BlockMinds
-
-Team Leader:
-Vivek N Patil
-
-Team Members:
-
-Mansvi Patel
-
-Roshni Rajput
-
-Khushi Dhamani
-
-📜 License
-
-This project is intended for educational, academic, and hackathon purposes.
+This project is intended for educational, academic, and hackathon purposes.  
 Commercial usage requires proper authorization.
+
+---
+
+## 🔥 Final Pitch
+
+CampusPrep leverages AI, alumni validation, and an intelligent MCP decision engine to deliver secure, scalable, and industry-ready interview preparation for students.
