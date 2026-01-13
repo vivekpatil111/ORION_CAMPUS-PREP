@@ -176,6 +176,6 @@ Commercial usage requires proper authorization.
 
 ---
 
-## 🔥 Final Pitch
+## 
 
 CampusPrep leverages AI, alumni validation, and an intelligent MCP decision engine to deliver secure, scalable, and industry-ready interview preparation for students.
