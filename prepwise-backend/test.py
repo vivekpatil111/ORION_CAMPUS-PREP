@@ -9,7 +9,7 @@ load_dotenv()
 
 # OpenRouter API configuration
 API_KEY = os.getenv("GEMINI_API_KEY") or os.getenv("GEMINI_API_KEY") or "GEMINI_API_KEY"
-BASE_URL = "https://openrouter.ai/api/v1/chat/completions"
+BASE_URL = "https://gemini.ai/api/v1/chat/completions"
 MODEL = "google/gemini-2.0-flash-exp:free"
 
 headers = {
