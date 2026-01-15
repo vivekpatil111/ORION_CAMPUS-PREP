@@ -165,7 +165,7 @@ Vivek N Patil
 **Team Members:**  
 - Mansvi Patel  
 - Roshni Rajput  
-- Khushi Dhamani  
+- Khushi Dhamani
 
 ---
 
