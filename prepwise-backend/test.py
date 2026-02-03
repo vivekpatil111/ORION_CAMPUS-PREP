@@ -12,7 +12,12 @@ API_KEY = os.getenv("GEMINI_API_KEY") or os.getenv("GEMINI_API_KEY") or "GEMINI_
 BASE_URL = "https://gemini.ai/api/v1/chat/completions"
 MODEL = "google/gemini-2.0-flash-exp:free"
 
-
+headers = {
+    "Authorization": f"Bearer {API_KEY}",
+    "Content-Type": "application/json",
+    "HTTP-Referer": "https://prepwise.com",
+    "X-Title": "PrepWise Test"
+}
 
 def test_simple_text():
     """Test simple text generation"""
