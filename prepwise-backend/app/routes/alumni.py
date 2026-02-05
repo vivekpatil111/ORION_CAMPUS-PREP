@@ -103,12 +103,27 @@ async def accept_request(
     data: dict,
     user_id: str = Depends(verify_user)
 ):
-    request_id = data.get("request_id")
-    if not request_id:
-        raise HTTPException(status_code=400, detail="request_id required")
+    try:
+        request_id = data.get("request_id")
+        if not request_id:
+            raise HTTPException(status_code=400, detail="request_id required")
 
-    firebase_service.update_mentorship_request_status(request_id, "accepted")
-    return {"status": "accepted"}
+        request_data = firebase_service.get_mentorship_request(request_id)
+        if not request_data:
+            raise HTTPException(status_code=404, detail="Request not found")
+
+        if request_data.get("alumni_id") != user_id:
+            raise HTTPException(status_code=403, detail="Not authorized to accept this request")
+
+        if request_data.get("status") != "pending":
+            raise HTTPException(status_code=400, detail="Only pending requests can be accepted")
+
+        firebase_service.update_mentorship_request_status(request_id, "accepted")
+        return {"request_id": request_id, "status": "accepted"}
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 @router.post("/requests/reject")
