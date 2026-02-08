@@ -160,11 +160,7 @@ All dashboards are synced to a central system ensuring transparency and consiste
 **Team Name:** BlockMinds  
 
 **Team Leader:**  
-Vivek N Patil 
-**Team Members:**  
-- Mansvi Patel  
-- Roshni Rajput  
-- Khushi Dhamani
+Vivek N Patil
 
 ---
 
